@@ -4,7 +4,7 @@ import { Student } from '../models';
 
 @Injectable()
 export class StudentService {
-  private serviceUrl = 'http://localhost:3300/';
+  private serviceUrl = 'http://localhost:3000/';
 
   constructor(public http: HttpClient) {}
 

@@ -23,8 +23,8 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.studentService.getAllStudents().subscribe((response: any) => {
-      for (let student of response.data) {
+    this.studentService.getAllStudents().subscribe((students: Student[]) => {
+      for (let student of students) {
         this.store.dispatch(new StudentActions.AddStudent(student));
       }
     });
